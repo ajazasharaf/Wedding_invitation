@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#4b0d20"
+  >
+
+  <meta
+    name="description"
+    content="Wedding invitation of Nasma Nazrin and Ajaz Asharaf on November 14, 2026."
+  >
+
+  <title>Nasma Nazrin &amp; Ajaz Asharaf | Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* =====================================================
+       GENERAL SETTINGS
+    ===================================================== */
+
+    :root {
+      --ivory: #fff8e9;
+      --ivory-dark: #f2e4cc;
+      --burgundy: #591126;
+      --burgundy-dark: #350713;
+      --forest: #103f34;
+      --forest-dark: #082b23;
+      --gold: #c99b3b;
+      --gold-light: #f1d479;
+      --text: #481321;
+      --white: #fffdf8;
+
+      /*
+       * The image filename must be exactly:
+       * images/ajaz-nasma.jpeg
+       */
+      --hero-image: url("./images/ajaz-nasma.jpeg");
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--text);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    button {
+      border-radius: 0;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .section {
+      overflow: hidden;
+      padding: 100px 24px;
+    }
+
+    .small-heading {
+      color: var(--gold);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      line-height: 1.8;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: clamp(46px, 7vw, 70px);
+      font-weight: 500;
+      line-height: 1;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .decoration {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin: 25px auto 40px;
+      width: 180px;
+    }
+
+    .decoration::before,
+    .decoration::after {
+      background: var(--gold);
+      content: "";
+      height: 1px;
+      width: 72px;
+    }
+
+    .decoration span {
+      background: var(--gold);
+      height: 8px;
+      margin: 0 12px;
+      transform: rotate(45deg);
+      width: 8px;
+    }
+
+    .button {
+      align-items: center;
+      background: var(--burgundy);
+      border: 1px solid var(--burgundy);
+      color: var(--gold-light);
+      cursor: pointer;
+      display: inline-flex;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      justify-content: center;
+      letter-spacing: 2px;
+      min-height: 50px;
+      padding: 14px 25px;
+      text-transform: uppercase;
+      transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--gold);
+      border-color: var(--gold);
+      box-shadow: 0 12px 28px rgba(71, 16, 32, 0.18);
+      color: var(--burgundy-dark);
+      outline: none;
+      transform: translateY(-3px);
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      align-items: center;
+      background: var(--burgundy-dark);
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: hidden;
+      padding: 50px 20px 32px;
+      position: relative;
+      text-align: center;
+    }
+
+    /*
+     * Desktop image:
+     * The photo fills the complete hero section.
+     */
+    .hero-photo {
+      animation: desktop-photo-zoom 14s ease-out both;
+      background-image: var(--hero-image);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      inset: 0;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      background:
+        radial-gradient(
+          circle at 50% 32%,
+          rgba(0, 0, 0, 0.02),
+          rgba(0, 0, 0, 0.24) 55%,
+          rgba(0, 0, 0, 0.72) 100%
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(20, 7, 10, 0.12) 0%,
+          rgba(15, 5, 8, 0.38) 50%,
+          rgba(12, 4, 7, 0.95) 100%
+        );
+      inset: 0;
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .hero .small-heading {
+      animation: fade-down 1s 0.15s ease forwards;
+      color: var(--gold-light);
+      opacity: 0;
+    }
+
+    .couple-names {
+      align-items: center;
+      animation: names-appear 1.3s 0.4s ease forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 30px auto;
+      opacity: 0;
+      transform: scale(0.9);
+      width: 100%;
+    }
+
+    .person-name {
+      display: block;
+      font-size: clamp(62px, 10vw, 112px);
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 0.85;
+      text-shadow: 0 5px 30px rgba(0, 0, 0, 0.85);
+      white-space: nowrap;
+    }
+
+    .and-symbol {
+      color: var(--gold-light);
+      display: block;
+      font-size: clamp(54px, 7vw, 82px);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 0.6;
+      margin: 20px 0 17px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-date {
+      animation: fade-up 1s 0.85s ease forwards;
+      font-size: clamp(19px, 2.5vw, 25px);
+      font-style: italic;
+      opacity: 0;
+    }
+
+    .hero-message {
+      animation: fade-up 1s 1.05s ease forwards;
+      font-size: clamp(17px, 2vw, 21px);
+      font-style: italic;
+      line-height: 1.6;
+      margin: 20px auto 0;
+      max-width: 700px;
+      opacity: 0;
+    }
+
+    .down-arrow {
+      animation:
+        fade-up 1s 1.25s ease forwards,
+        arrow-bounce 1.8s 2.3s infinite;
+      color: var(--gold-light);
+      display: inline-block;
+      font-size: 30px;
+      margin-top: 25px;
+      opacity: 0;
+    }
+
+    @keyframes desktop-photo-zoom {
+      from {
+        transform: scale(1.06);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fade-down {
+      from {
+        opacity: 0;
+        transform: translateY(-25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes names-appear {
+      from {
+        filter: blur(5px);
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        filter: blur(0);
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes arrow-bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(9px);
+      }
+    }
+
+    /* =====================================================
+       SCROLL ANIMATIONS
+    ===================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(45px);
+      transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal.from-left {
+      transform: translateX(-60px);
+    }
+
+    .reveal.from-right {
+      transform: translateX(60px);
+    }
+
+    .reveal.zoom {
+      transform: scale(0.88);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    .delay-1 {
+      transition-delay: 0.12s;
+    }
+
+    .delay-2 {
+      transition-delay: 0.24s;
+    }
+
+    .delay-3 {
+      transition-delay: 0.36s;
+    }
+
+    /* =====================================================
+       SAVE THE DATE
+    ===================================================== */
+
+    .save-date {
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(201, 155, 59, 0.14),
+          transparent 36%
+        ),
+        var(--ivory);
+    }
+
+    .save-grid {
+      align-items: center;
+      display: grid;
+      gap: 60px;
+      grid-template-columns: 1fr 420px;
+    }
+
+    .save-content .small-heading {
+      text-align: left;
+    }
+
+    .date-text {
+      color: var(--burgundy);
+      font-size: clamp(50px, 7vw, 82px);
+      font-weight: 600;
+      letter-spacing: 4px;
+      line-height: 1;
+      margin: 20px 0;
+    }
+
+    .invitation-text {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+
+    .calendar-card {
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid var(--gold);
+      box-shadow: 0 20px 50px rgba(71, 16, 32, 0.08);
+      padding: 50px 30px;
+      position: relative;
+      text-align: center;
+    }
+
+    .calendar-card::before {
+      border: 1px solid rgba(201, 155, 59, 0.36);
+      content: "";
+      inset: 8px;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .calendar-month {
+      color: var(--gold);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .calendar-day {
+      color: var(--burgundy);
+      font-size: 120px;
+      line-height: 0.95;
+    }
+
+    .calendar-year {
+      font-size: 27px;
+      letter-spacing: 8px;
+      padding-left: 8px;
+    }
+
+    .calendar-weekday {
+      border-top: 1px solid rgba(201, 155, 59, 0.5);
+      font-size: 22px;
+      font-style: italic;
+      margin: 25px auto 0;
+      padding-top: 18px;
+      width: 70%;
+    }
+
+    /* =====================================================
+       COUNTDOWN
+    ===================================================== */
+
+    .countdown-section {
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(142, 38, 64, 0.3),
+          transparent 60%
+        ),
+        linear-gradient(
+          135deg,
+          var(--burgundy),
+          var(--burgundy-dark)
+        );
+      color: var(--white);
+      text-align: center;
+    }
+
+    .countdown-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 55px auto;
+      max-width: 850px;
+    }
+
+    .countdown-column {
+      text-align: center;
+    }
+
+    .countdown-circle {
+      align-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      height: 150px;
+      justify-content: center;
+      margin: auto;
+      position: relative;
+      width: 150px;
+    }
+
+    .countdown-circle::before {
+      border: 1px solid rgba(241, 212, 121, 0.28);
+      border-radius: 50%;
+      content: "";
+      inset: 6px;
+      position: absolute;
+    }
+
+    .countdown-number {
+      color: var(--gold-light);
+      font-size: 55px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .countdown-label {
+      color: var(--gold-light);
+      display: block;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-top: 18px;
+      text-transform: uppercase;
+    }
+
+    .countdown-message {
+      color: var(--gold-light);
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    /* =====================================================
+       EVENTS
+    ===================================================== */
+
+    .events-section {
+      background: var(--ivory);
+    }
+
+    .timezone {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .events-grid {
+      display: grid;
+      gap: 35px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-top: 55px;
+    }
+
+    .event-card {
+      background: rgba(255, 255, 255, 0.35);
+      border: 1px solid var(--gold);
+      box-shadow: 0 18px 40px rgba(71, 16, 32, 0.06);
+      padding: 50px 35px;
+      position: relative;
+      text-align: center;
+      transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      box-shadow: 0 24px 50px rgba(71, 16, 32, 0.12);
+      transform: translateY(-6px);
+    }
+
+    .event-card::before {
+      border: 1px solid rgba(201, 155, 59, 0.3);
+      content: "";
+      inset: 8px;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .event-time {
+      color: var(--gold);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .event-title {
+      color: var(--burgundy);
+      font-size: 42px;
+      font-weight: 500;
+      margin: 15px 0 8px;
+      text-transform: uppercase;
+    }
+
+    .event-date {
+      font-size: 21px;
+      font-style: italic;
+    }
+
+    .event-venue {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+
+    .event-address {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 10px auto 28px;
+      max-width: 370px;
+    }
+
+    .event-card .button {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* =====================================================
+       VENUES
+    ===================================================== */
+
+    .venues-section {
+      background:
+        radial-gradient(
+          circle at 50% 10%,
+          rgba(43, 119, 95, 0.35),
+          transparent 50%
+        ),
+        linear-gradient(
+          135deg,
+          var(--forest),
+          var(--forest-dark)
+        );
+      color: var(--white);
+    }
+
+    .venue-list {
+      display: grid;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .venue-card {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid var(--gold);
+      display: grid;
+      grid-template-columns: 40% 60%;
+      overflow: hidden;
+    }
+
+    .venue-details {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .venue-details .small-heading {
+      text-align: left;
+    }
+
+    .venue-title {
+      color: var(--gold-light);
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    .venue-address {
+      font-size: 19px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .map {
+      border: 0;
+      min-height: 380px;
+      width: 100%;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(201, 155, 59, 0.12),
+          transparent 42%
+        ),
+        var(--ivory);
+      overflow: hidden;
+      padding: 90px 20px 40px;
+      text-align: center;
+    }
+
+    .family-names {
+      align-items: stretch;
+      display: grid;
+      gap: 45px;
+      grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+      margin: 40px auto 35px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .family-column {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      justify-content: center;
+    }
+
+    .family-column:first-child {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .family-column:last-child {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .family-column p {
+      color: var(--burgundy);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .family-divider {
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          var(--gold) 15%,
+          var(--gold) 85%,
+          transparent
+        );
+      min-height: 170px;
+      width: 1px;
+    }
+
+    .footer-message {
+      font-size: 23px;
+      font-style: italic;
+      margin: auto;
+      max-width: 650px;
+    }
+
+    .footer-date {
+      border-top: 1px solid rgba(201, 155, 59, 0.4);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin: 65px auto 0;
+      max-width: 800px;
+      padding-top: 25px;
+      text-transform: uppercase;
+    }
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 800px) {
+      .section {
+        padding: 75px 18px;
+      }
+
+      .save-grid,
+      .events-grid,
+      .venue-card {
+        grid-template-columns: 1fr;
+      }
+
+      .save-content {
+        text-align: center;
+      }
+
+      .save-content .small-heading {
+        text-align: center;
+      }
+
+      .invitation-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .calendar-card {
+        margin: auto;
+        max-width: 430px;
+        width: 100%;
+      }
+
+      .countdown-grid {
+        gap: 45px 15px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .countdown-circle {
+        height: 125px;
+        width: 125px;
+      }
+
+      .countdown-number {
+        font-size: 45px;
+      }
+
+      .venue-details {
+        align-items: center;
+        padding: 40px 25px;
+        text-align: center;
+      }
+
+      .venue-details .small-heading {
+        text-align: center;
+      }
+
+      .map {
+        min-height: 320px;
+      }
+
+      .reveal.from-left,
+      .reveal.from-right {
+        transform: translateY(45px);
+      }
+
+      .reveal.visible {
+        transform: translateY(0);
+      }
+    }
+
+    /* =====================================================
+       MOBILE HERO FIX
+    ===================================================== */
+
+    @media (max-width: 600px) {
+      /*
+       * The hero remains full-screen, but the landscape
+       * image gets its own full-width area at the top.
+       *
+       * This prevents the photo from becoming narrow and
+       * avoids extreme cropping of the couple.
+       */
+      .hero {
+        align-items: flex-start;
+        background:
+          linear-gradient(
+            to bottom,
+            #4b1e25 0%,
+            var(--burgundy-dark) 100%
+          );
+        min-height: 100svh;
+        padding:
+          calc(57vw + 30px)
+          14px
+          35px;
+      }
+
+      .hero-photo {
+        animation: mobile-photo-fade 1.4s ease-out both;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        /*
+         * The attached image is landscape.
+         * 100% auto keeps its full width on mobile.
+         */
+        background-size: 100% auto;
+        height: 57vw;
+        inset: 0 0 auto 0;
+        max-height: 340px;
+        transform: none;
+        width: 100%;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(15, 5, 8, 0.02) 0%,
+            rgba(15, 5, 8, 0.08) 35%,
+            rgba(15, 5, 8, 0.62) 57vw,
+            var(--burgundy-dark) calc(57vw + 110px),
+            var(--burgundy-dark) 100%
+          );
+      }
+
+      .hero-content {
+        margin: 0 auto;
+      }
+
+      .hero .small-heading {
+        font-size: 9px;
+        letter-spacing: 3px;
+      }
+
+      .couple-names {
+        margin: 22px auto;
+      }
+
+      .person-name {
+        font-size: clamp(43px, 13vw, 60px);
+        line-height: 0.9;
+      }
+
+      .and-symbol {
+        font-size: 47px;
+        margin: 14px 0 12px;
+      }
+
+      .hero-date {
+        font-size: 18px;
+      }
+
+      .hero-message {
+        font-size: 17px;
+        max-width: 350px;
+      }
+
+      @keyframes mobile-photo-fade {
+        from {
+          opacity: 0;
+          transform: scale(1.02);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .date-text {
+        font-size: 43px;
+        letter-spacing: 1px;
+      }
+
+      .calendar-day {
+        font-size: 100px;
+      }
+
+      .countdown-circle {
+        height: 108px;
+        width: 108px;
+      }
+
+      .countdown-number {
+        font-size: 38px;
+      }
+
+      .event-card {
+        padding: 45px 22px;
+      }
+
+      .event-title {
+        font-size: 36px;
+      }
+
+      .family-names {
+        gap: 12px;
+        grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+        margin: 35px auto 30px;
+      }
+
+      .family-column {
+        gap: 20px;
+      }
+
+      .family-column p {
+        font-size: clamp(16px, 4.6vw, 22px);
+        overflow-wrap: anywhere;
+      }
+
+      .family-divider {
+        min-height: 140px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .person-name {
+        font-size: 39px;
+      }
+
+      .countdown-circle {
+        height: 98px;
+        width: 98px;
+      }
+
+      .family-column p {
+        font-size: 15px;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal,
+      .hero .small-heading,
+      .couple-names,
+      .hero-date,
+      .hero-message,
+      .down-arrow {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!--
+    The browser tries to play music automatically.
+
+    Most mobile browsers block autoplay with sound. If autoplay
+    is blocked, the first tap anywhere on the page starts it.
+-->
+<audio
+  id="backgroundMusic"
+  autoplay
+  loop
+  preload="auto"
+>
+  <source
+    src="./audio/wedding-music.mp3"
+    type="audio/mpeg"
+  >
+
+  Your browser does not support audio.
+</audio>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+  <div
+    class="hero-photo"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="hero-overlay"
+    aria-hidden="true"
+  ></div>
+
+  <div class="hero-content">
+
+    <p class="small-heading">
+      Together with their families
+    </p>
+
+    <h1 class="couple-names">
+
+            <span class="person-name">
+                Nasma Nazrin
+            </span>
+
+      <span class="and-symbol">
+                &amp;
+            </span>
+
+      <span class="person-name">
+                Ajaz Asharaf
+            </span>
+
+    </h1>
+
+    <p class="hero-date">
+      Saturday, November 14, 2026 · Kerala
+    </p>
+
+    <p class="hero-message">
+      With joyful hearts, we invite you to share in the beginning
+      of our forever and celebrate the day our two lives become one.
+    </p>
+
+    <a
+      class="down-arrow"
+      href="#save-the-date"
+      aria-label="Continue to the invitation"
+    >
+      ↓
+    </a>
+
+  </div>
+
+</header>
+
+<main>
+
+  <!-- SAVE THE DATE -->
+
+  <section
+    class="section save-date"
+    id="save-the-date"
+  >
+    <div class="container save-grid">
+
+      <div class="save-content reveal from-left">
+
+        <p class="small-heading">
+          Save the date
+        </p>
+
+        <h2 class="date-text">
+          14 · 11 · 2026
+        </h2>
+
+        <p class="invitation-text">
+          Your presence will make our celebration complete.
+          We look forward to sharing this beautiful occasion
+          with you.
+        </p>
+
+        <button
+          class="button"
+          id="calendarButton"
+          type="button"
+        >
+          Add to calendar
+        </button>
+
+      </div>
+
+      <div class="calendar-card reveal from-right delay-1">
+
+        <p class="calendar-month">
+          November
+        </p>
+
+        <div class="calendar-day">
+          14
+        </div>
+
+        <div class="calendar-year">
+          2026
+        </div>
+
+        <p class="calendar-weekday">
+          Saturday
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+
+  <section class="section countdown-section">
+    <div class="container">
+
+      <p class="small-heading reveal">
+        Counting down to forever
+      </p>
+
+      <h2 class="section-title reveal delay-1">
+        The Big Day Awaits
+      </h2>
+
+      <div class="decoration reveal delay-1">
+        <span></span>
+      </div>
+
+      <div class="countdown-grid">
+
+        <div class="countdown-column reveal zoom">
+          <div class="countdown-circle">
+                        <span
+                          class="countdown-number"
+                          id="days"
+                        >
+                            0
+                        </span>
+          </div>
+
+          <span class="countdown-label">
+                        Days
+                    </span>
+        </div>
+
+        <div class="countdown-column reveal zoom delay-1">
+          <div class="countdown-circle">
+                        <span
+                          class="countdown-number"
+                          id="hours"
+                        >
+                            00
+                        </span>
+          </div>
+
+          <span class="countdown-label">
+                        Hours
+                    </span>
+        </div>
+
+        <div class="countdown-column reveal zoom delay-2">
+          <div class="countdown-circle">
+                        <span
+                          class="countdown-number"
+                          id="minutes"
+                        >
+                            00
+                        </span>
+          </div>
+
+          <span class="countdown-label">
+                        Minutes
+                    </span>
+        </div>
+
+        <div class="countdown-column reveal zoom delay-3">
+          <div class="countdown-circle">
+                        <span
+                          class="countdown-number"
+                          id="seconds"
+                        >
+                            00
+                        </span>
+          </div>
+
+          <span class="countdown-label">
+                        Seconds
+                    </span>
+        </div>
+
+      </div>
+
+      <p
+        class="countdown-message reveal"
+        id="countdownMessage"
+      >
+        We cannot wait for you to be part of our special day.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+
+  <section class="section events-section">
+    <div class="container">
+
+      <p class="small-heading reveal">
+        The itinerary
+      </p>
+
+      <h2 class="section-title reveal delay-1">
+        The Celebrations
+      </h2>
+
+      <div class="decoration reveal delay-1">
+        <span></span>
+      </div>
+
+      <p class="timezone reveal delay-2">
+        Kerala, India · Indian Standard Time (GMT+5:30)
+      </p>
+
+      <div class="events-grid">
+
+        <article class="event-card reveal from-left">
+
+          <p class="event-time">
+            12:00 PM – 2:00 PM
+          </p>
+
+          <h3 class="event-title">
+            Wedding
+          </h3>
+
+          <p class="event-date">
+            Saturday, November 14, 2026
+          </p>
+
+          <p class="event-venue">
+            St. John The Baptist Church
+          </p>
+
+          <p class="event-address">
+            Moonnumuri–Chembuchirra Road,
+            Moonnumuri, Mattathur,
+            Kerala 680684, India
+          </p>
+
+          <a
+            class="button"
+            href="https://maps.app.goo.gl/aoEuUMnr5EPtCzFS9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get directions
+          </a>
+
+        </article>
+
+        <article class="event-card reveal from-right delay-1">
+
+          <p class="event-time">
+            6:30 PM – 8:30 PM
+          </p>
+
+          <h3 class="event-title">
+            Reception
+          </h3>
+
+          <p class="event-date">
+            Saturday, November 14, 2026
+          </p>
+
+          <p class="event-venue">
+            St. Mary's Church Parish Hall
+          </p>
+
+          <p class="event-address">
+            Kombodinjamakkal,
+            Kerala 680697, India
+          </p>
+
+          <a
+            class="button"
+            href="https://maps.app.goo.gl/nGC4vRTGt32o6SVE9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get directions
+          </a>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VENUES -->
+
+  <section class="section venues-section">
+    <div class="container">
+
+      <p class="small-heading reveal">
+        Where to celebrate
+      </p>
+
+      <h2 class="section-title reveal delay-1">
+        The Venues
+      </h2>
+
+      <div class="decoration reveal delay-1">
+        <span></span>
+      </div>
+
+      <div class="venue-list">
+
+        <article class="venue-card reveal">
+
+          <div class="venue-details">
+
+            <p class="small-heading">
+              Wedding
+            </p>
+
+            <h3 class="venue-title">
+              St. John The Baptist Church
+            </h3>
+
+            <p class="venue-address">
+              Moonnumuri–Chembuchirra Road,
+              Moonnumuri, Mattathur,
+              Kerala 680684, India
+            </p>
+
+            <a
+              class="button"
+              href="https://maps.app.goo.gl/aoEuUMnr5EPtCzFS9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get directions
+            </a>
+
+          </div>
+
+          <iframe
+            class="map"
+            title="Map of St. John The Baptist Church Hall"
+            src="https://www.google.com/maps?q=St%20John%20The%20Baptist%20Church%20Moonnumuri%20Mattathur%20Kerala%20680684&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+        </article>
+
+        <article class="venue-card reveal">
+
+          <div class="venue-details">
+
+            <p class="small-heading">
+              Reception
+            </p>
+
+            <h3 class="venue-title">
+              St. Mary's Church Parish Hall
+            </h3>
+
+            <p class="venue-address">
+              Kombodinjamakkal,
+              Kerala 680697, India
+            </p>
+
+            <a
+              class="button"
+              href="https://maps.app.goo.gl/nGC4vRTGt32o6SVE9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get directions
+            </a>
+
+          </div>
+
+          <iframe
+            class="map"
+            title="Map of St. Mary's Church Parish Hall"
+            src="https://www.google.com/maps?q=St%20Marys%20Church%20Parish%20Hall%20Kombodinjamakkal%20Kerala%20680697&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <p class="small-heading reveal">
+    With love and gratitude
+  </p>
+
+  <div class="family-names reveal zoom delay-1">
+
+    <div class="family-column">
+      <p>Asharaf T A</p>
+      <p>Sophia Asharaf</p>
+      <p>Alfin Asharaf</p>
+    </div>
+
+    <div
+      class="family-divider"
+      aria-hidden="true"
+    ></div>
+
+    <div class="family-column">
+      <p>Huassain Ali</p>
+      <p>Raisa Hussain</p>
+      <p>Muhammed Aslam</p>
+    </div>
+
+  </div>
+
+  <p class="footer-message reveal delay-2">
+    We would be honoured to have you join us at the
+    beginning of this beautiful chapter.
+  </p>
+
+  <p class="footer-date reveal delay-3">
+    Saturday · November 14, 2026 · Kerala, India
+  </p>
+
+</footer>
+
+<script>
+  "use strict";
+
+  /* =====================================================
+     BACKGROUND MUSIC
+  ===================================================== */
+
+  const backgroundMusic =
+    document.getElementById("backgroundMusic");
+
+  backgroundMusic.volume = 0.7;
+
+  let musicStarted = false;
+
+  async function startMusic() {
+    if (musicStarted && !backgroundMusic.paused) {
+      return;
+    }
+
+    try {
+      await backgroundMusic.play();
+      musicStarted = true;
+      removeMusicListeners();
+    } catch (error) {
+      /*
+       * Autoplay was blocked by the browser.
+       * The first tap or click will try again.
+       */
+    }
+  }
+
+  function removeMusicListeners() {
+    document.removeEventListener("pointerdown", startMusic);
+    document.removeEventListener("touchend", startMusic);
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("keydown", startMusic);
+  }
+
+  window.addEventListener("load", startMusic);
+
+  document.addEventListener("pointerdown", startMusic);
+  document.addEventListener("touchend", startMusic);
+  document.addEventListener("click", startMusic);
+  document.addEventListener("keydown", startMusic);
+
+  /* =====================================================
+     COUNTDOWN
+  ===================================================== */
+
+  const weddingTime =
+    new Date("2026-11-14T12:00:00+05:30").getTime();
+
+  const daysElement =
+    document.getElementById("days");
+
+  const hoursElement =
+    document.getElementById("hours");
+
+  const minutesElement =
+    document.getElementById("minutes");
+
+  const secondsElement =
+    document.getElementById("seconds");
+
+  const countdownMessage =
+    document.getElementById("countdownMessage");
+
+  function updateCountdown() {
+    const remainingTime = weddingTime - Date.now();
+
+    if (remainingTime <= 0) {
+      daysElement.textContent = "0";
+      hoursElement.textContent = "00";
+      minutesElement.textContent = "00";
+      secondsElement.textContent = "00";
+
+      countdownMessage.textContent =
+        "Today is the day—let the celebration begin!";
+
+      return;
+    }
+
+    const oneDay = 1000 * 60 * 60 * 24;
+    const oneHour = 1000 * 60 * 60;
+    const oneMinute = 1000 * 60;
+
+    const days = Math.floor(
+      remainingTime / oneDay
+    );
+
+    const hours = Math.floor(
+      (remainingTime % oneDay) / oneHour
+    );
+
+    const minutes = Math.floor(
+      (remainingTime % oneHour) / oneMinute
+    );
+
+    const seconds = Math.floor(
+      (remainingTime % oneMinute) / 1000
+    );
+
+    daysElement.textContent = String(days);
+
+    hoursElement.textContent =
+      String(hours).padStart(2, "0");
+
+    minutesElement.textContent =
+      String(minutes).padStart(2, "0");
+
+    secondsElement.textContent =
+      String(seconds).padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* =====================================================
+     SCROLL REVEAL
+  ===================================================== */
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -25px 0px"
+      }
+    );
+
+    revealElements.forEach(function (element) {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealElements.forEach(function (element) {
+      element.classList.add("visible");
+    });
+  }
+
+  /* =====================================================
+     ADD TO CALENDAR
+  ===================================================== */
+
+  const calendarButton =
+    document.getElementById("calendarButton");
+
+  calendarButton.addEventListener("click", function () {
+    const calendarData = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "CALSCALE:GREGORIAN",
+      "METHOD:PUBLISH",
+      "PRODID:-//Nasma and Ajaz Wedding//EN",
+
+      "BEGIN:VEVENT",
+      "UID:nasma-ajaz-wedding-20261114@example.com",
+      "DTSTAMP:20260101T000000Z",
+      "DTSTART:20261114T063000Z",
+      "DTEND:20261114T083000Z",
+      "SUMMARY:Wedding of Nasma Nazrin and Ajaz Asharaf",
+      "DESCRIPTION:Wedding ceremony of Nasma Nazrin and Ajaz Asharaf",
+      "LOCATION:St. John The Baptist Church Hall, Moonnumuri, Mattathur, Kerala 680684",
+      "END:VEVENT",
+
+      "BEGIN:VEVENT",
+      "UID:nasma-ajaz-reception-20261114@example.com",
+      "DTSTAMP:20260101T000000Z",
+      "DTSTART:20261114T130000Z",
+      "DTEND:20261114T150000Z",
+      "SUMMARY:Reception of Nasma Nazrin and Ajaz Asharaf",
+      "DESCRIPTION:Wedding reception of Nasma Nazrin and Ajaz Asharaf",
+      "LOCATION:St. Mary's Church Parish Hall, Kombodinjamakkal, Kerala 680697",
+      "END:VEVENT",
+
+      "END:VCALENDAR"
+    ].join("\r\n");
+
+    const calendarFile = new Blob(
+      [calendarData],
+      {
+        type: "text/calendar;charset=utf-8"
+      }
+    );
+
+    const fileUrl =
+      URL.createObjectURL(calendarFile);
+
+    const downloadLink =
+      document.createElement("a");
+
+    downloadLink.href = fileUrl;
+
+    downloadLink.download =
+      "Nasma-Nazrin-Ajaz-Asharaf-Wedding.ics";
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
+
+    URL.revokeObjectURL(fileUrl);
+  });
+</script>
+
+</body>
+</html>
