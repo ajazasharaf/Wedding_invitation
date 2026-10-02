@@ -10,7 +10,7 @@
 
   <meta
     name="theme-color"
-    content="#4b0d20"
+    content="#350713"
   >
 
   <meta
@@ -30,32 +30,27 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
   <style>
     /* =====================================================
-       GENERAL SETTINGS
+       COLORS AND GENERAL SETTINGS
     ===================================================== */
 
     :root {
       --ivory: #fff8e9;
-      --ivory-dark: #f2e4cc;
+      --ivory-dark: #f1e2c8;
       --burgundy: #591126;
       --burgundy-dark: #350713;
+      --burgundy-deep: #24030c;
       --forest: #103f34;
-      --forest-dark: #082b23;
+      --forest-dark: #072b23;
       --gold: #c99b3b;
       --gold-light: #f1d479;
       --text: #481321;
       --white: #fffdf8;
-
-      /*
-       * The image filename must be exactly:
-       * images/ajaz-nasma.jpeg
-       */
-      --hero-image: url("./images/ajaz-nasma.jpeg");
     }
 
     * {
@@ -73,6 +68,17 @@
       color: var(--text);
       font-family: "Cormorant Garamond", Georgia, serif;
       overflow-x: hidden;
+    }
+
+    body,
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
 
     a {
@@ -161,8 +167,8 @@
       transition:
         background-color 0.25s ease,
         border-color 0.25s ease,
-        color 0.25s ease,
         box-shadow 0.25s ease,
+        color 0.25s ease,
         transform 0.25s ease;
     }
 
@@ -177,10 +183,10 @@
     }
 
     /* =====================================================
-       HERO
+       OPENING / HERO
     ===================================================== */
 
-    .hero {
+    .opening-hero {
       align-items: center;
       background: var(--burgundy-dark);
       color: var(--white);
@@ -189,39 +195,39 @@
       min-height: 100vh;
       min-height: 100svh;
       overflow: hidden;
-      padding: 50px 20px 32px;
+      padding: 50px 20px 35px;
       position: relative;
       text-align: center;
     }
 
-    /*
-     * Desktop image:
-     * The photo fills the complete hero section.
-     */
-    .hero-photo {
-      animation: desktop-photo-zoom 14s ease-out both;
-      background-image: var(--hero-image);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    .opening-photo {
       inset: 0;
+      overflow: hidden;
       position: absolute;
       z-index: 0;
     }
 
-    .hero-overlay {
+    .opening-photo img {
+      animation: desktop-photo-entrance 14s ease-out forwards;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+    }
+
+    .opening-overlay {
       background:
         radial-gradient(
           circle at 50% 32%,
           rgba(0, 0, 0, 0.02),
-          rgba(0, 0, 0, 0.24) 55%,
-          rgba(0, 0, 0, 0.72) 100%
+          rgba(0, 0, 0, 0.2) 52%,
+          rgba(0, 0, 0, 0.68) 100%
         ),
         linear-gradient(
           to bottom,
-          rgba(20, 7, 10, 0.12) 0%,
-          rgba(15, 5, 8, 0.38) 50%,
-          rgba(12, 4, 7, 0.95) 100%
+          rgba(17, 4, 8, 0.12) 0%,
+          rgba(17, 4, 8, 0.34) 48%,
+          rgba(12, 2, 6, 0.96) 100%
         );
       inset: 0;
       pointer-events: none;
@@ -229,82 +235,83 @@
       z-index: 1;
     }
 
-    .hero-content {
+    .opening-content {
+      margin: auto;
       max-width: 1050px;
       position: relative;
       width: 100%;
       z-index: 2;
     }
 
-    .hero .small-heading {
-      animation: fade-down 1s 0.15s ease forwards;
+    .opening-eyebrow {
+      animation: opening-fade-down 1s 0.15s ease forwards;
       color: var(--gold-light);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      line-height: 1.7;
       opacity: 0;
+      text-transform: uppercase;
     }
 
-    .couple-names {
+    .opening-names {
       align-items: center;
-      animation: names-appear 1.3s 0.4s ease forwards;
+      animation: opening-names-enter 1.35s 0.4s ease forwards;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      margin: 30px auto;
-      opacity: 0;
-      transform: scale(0.9);
-      width: 100%;
-    }
-
-    .person-name {
-      display: block;
-      font-size: clamp(62px, 10vw, 112px);
+      font-size: clamp(62px, 9vw, 110px);
       font-style: italic;
       font-weight: 600;
-      letter-spacing: 0.01em;
-      line-height: 0.85;
-      text-shadow: 0 5px 30px rgba(0, 0, 0, 0.85);
+      line-height: 0.84;
+      margin: 30px auto;
+      opacity: 0;
+      text-shadow: 0 5px 30px rgba(0, 0, 0, 0.82);
+      transform: scale(0.9);
+    }
+
+    .opening-names > span {
+      display: block;
       white-space: nowrap;
     }
 
-    .and-symbol {
+    .opening-ampersand {
       color: var(--gold-light);
-      display: block;
-      font-size: clamp(54px, 7vw, 82px);
-      font-style: italic;
+      font-size: 0.7em;
       font-weight: 500;
       line-height: 0.6;
-      margin: 20px 0 17px;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin: 19px 0 16px;
     }
 
-    .hero-date {
-      animation: fade-up 1s 0.85s ease forwards;
-      font-size: clamp(19px, 2.5vw, 25px);
+    .opening-date {
+      animation: opening-fade-up 1s 0.85s ease forwards;
+      font-size: clamp(19px, 2.4vw, 25px);
       font-style: italic;
       opacity: 0;
     }
 
-    .hero-message {
-      animation: fade-up 1s 1.05s ease forwards;
+    .opening-message {
+      animation: opening-fade-up 1s 1.05s ease forwards;
       font-size: clamp(17px, 2vw, 21px);
       font-style: italic;
-      line-height: 1.6;
+      line-height: 1.5;
       margin: 20px auto 0;
       max-width: 700px;
       opacity: 0;
     }
 
-    .down-arrow {
+    .opening-arrow {
       animation:
-        fade-up 1s 1.25s ease forwards,
-        arrow-bounce 1.8s 2.3s infinite;
+        opening-fade-up 1s 1.25s ease forwards,
+        opening-arrow-bounce 1.8s 2.3s infinite;
       color: var(--gold-light);
       display: inline-block;
       font-size: 30px;
-      margin-top: 25px;
+      margin-top: 24px;
       opacity: 0;
     }
 
-    @keyframes desktop-photo-zoom {
+    @keyframes desktop-photo-entrance {
       from {
         transform: scale(1.06);
       }
@@ -314,7 +321,7 @@
       }
     }
 
-    @keyframes fade-down {
+    @keyframes opening-fade-down {
       from {
         opacity: 0;
         transform: translateY(-25px);
@@ -326,10 +333,10 @@
       }
     }
 
-    @keyframes fade-up {
+    @keyframes opening-fade-up {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(28px);
       }
 
       to {
@@ -338,7 +345,7 @@
       }
     }
 
-    @keyframes names-appear {
+    @keyframes opening-names-enter {
       from {
         filter: blur(5px);
         opacity: 0;
@@ -352,19 +359,19 @@
       }
     }
 
-    @keyframes arrow-bounce {
+    @keyframes opening-arrow-bounce {
       0%,
       100% {
         transform: translateY(0);
       }
 
       50% {
-        transform: translateY(9px);
+        transform: translateY(8px);
       }
     }
 
     /* =====================================================
-       SCROLL  ANIMATIONS
+       SCROLL ANIMATIONS
     ===================================================== */
 
     .reveal {
@@ -384,7 +391,7 @@
     }
 
     .reveal.zoom {
-      transform: scale(0.88);
+      transform: scale(0.9);
     }
 
     .reveal.visible {
@@ -587,7 +594,7 @@
     }
 
     .event-card {
-      background: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.36);
       border: 1px solid var(--gold);
       box-shadow: 0 18px 40px rgba(71, 16, 32, 0.06);
       padding: 50px 35px;
@@ -599,8 +606,8 @@
     }
 
     .event-card:hover {
-      box-shadow: 0 24px 50px rgba(71, 16, 32, 0.12);
-      transform: translateY(-6px);
+      box-shadow: 0 25px 55px rgba(71, 16, 32, 0.13);
+      transform: translateY(-7px);
     }
 
     .event-card::before {
@@ -871,103 +878,131 @@
     }
 
     /* =====================================================
-       MOBILE HERO FIX
+       MOBILE OPENING LAYOUT
     ===================================================== */
 
     @media (max-width: 600px) {
       /*
-       * The hero remains full-screen, but the landscape
-       * image gets its own full-width area at the top.
+       * The opening is divided into:
+       * 1. A responsive photo area
+       * 2. A compact invitation area
        *
-       * This prevents the photo from becoming narrow and
-       * avoids extreme cropping of the couple.
+       * This keeps the complete introduction inside one
+       * mobile-browser viewport.
        */
-      .hero {
-        align-items: flex-start;
-        background:
-          linear-gradient(
-            to bottom,
-            #4b1e25 0%,
-            var(--burgundy-dark) 100%
-          );
-        min-height: 100svh;
-        padding:
-          calc(57vw + 30px)
-          14px
-          35px;
+      .opening-hero {
+        align-items: stretch;
+        display: grid;
+        grid-template-rows:
+                    clamp(245px, 38svh, 330px)
+                    minmax(0, 1fr);
+        height: 100svh;
+        min-height: 640px;
+        padding: 0;
       }
 
-      .hero-photo {
-        animation: mobile-photo-fade 1.4s ease-out both;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-        /*
-         * The attached image is landscape.
-         * 100% auto keeps its full width on mobile.
-         */
-        background-size: 100% auto;
-        height: 57vw;
-        inset: 0 0 auto 0;
-        max-height: 340px;
-        transform: none;
+      .opening-photo {
+        grid-column: 1;
+        grid-row: 1;
+        inset: auto;
+        position: relative;
         width: 100%;
       }
 
-      .hero-overlay {
+      .opening-photo::before {
+        background-image: url("./images/ajaz-nasma.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
+        filter: blur(15px);
+        inset: -20px;
+        opacity: 0.32;
+        position: absolute;
+        transform: scale(1.08);
+      }
+
+      .opening-photo img {
+        animation: mobile-photo-entrance 1.2s ease-out forwards;
+        height: 100%;
+        object-fit: cover;
+
+        /*
+         * 48% keeps the couple near the center.
+         * Change to 45% or 52% only if a person is cropped.
+         */
+        object-position: 48% center;
+
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .opening-overlay {
         background:
           linear-gradient(
             to bottom,
-            rgba(15, 5, 8, 0.02) 0%,
-            rgba(15, 5, 8, 0.08) 35%,
-            rgba(15, 5, 8, 0.62) 57vw,
-            var(--burgundy-dark) calc(57vw + 110px),
+            rgba(13, 2, 6, 0.04) 0%,
+            rgba(13, 2, 6, 0.08) 24%,
+            rgba(53, 7, 19, 0.22) 34%,
+            rgba(53, 7, 19, 0.92) 43%,
+            var(--burgundy-dark) 48%,
             var(--burgundy-dark) 100%
           );
+        grid-column: 1;
+        grid-row: 1 / 3;
+        inset: 0;
+        position: absolute;
       }
 
-      .hero-content {
-        margin: 0 auto;
+      .opening-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        grid-column: 1;
+        grid-row: 2;
+        justify-content: center;
+        margin: 0;
+        min-height: 0;
+        padding:
+          14px
+          16px
+          max(18px, env(safe-area-inset-bottom));
       }
 
-      .hero .small-heading {
-        font-size: 9px;
+      .opening-eyebrow {
+        font-size: 8px;
         letter-spacing: 3px;
+        line-height: 1.4;
       }
 
-      .couple-names {
-        margin: 22px auto;
+      .opening-names {
+        font-size: clamp(40px, 11.8vw, 54px);
+        line-height: 0.86;
+        margin: 15px auto;
       }
 
-      .person-name {
-        font-size: clamp(43px, 13vw, 60px);
-        line-height: 0.9;
+      .opening-ampersand {
+        font-size: 0.67em;
+        line-height: 0.55;
+        margin: 10px 0 9px;
       }
 
-      .and-symbol {
-        font-size: 47px;
-        margin: 14px 0 12px;
+      .opening-date {
+        font-size: clamp(15px, 4.2vw, 18px);
+        line-height: 1.25;
       }
 
-      .hero-date {
-        font-size: 18px;
+      .opening-message {
+        font-size: clamp(14px, 3.8vw, 17px);
+        line-height: 1.32;
+        margin-top: 12px;
+        max-width: 355px;
       }
 
-      .hero-message {
-        font-size: 17px;
-        max-width: 350px;
-      }
-
-      @keyframes mobile-photo-fade {
-        from {
-          opacity: 0;
-          transform: scale(1.02);
-        }
-
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
+      .opening-arrow {
+        font-size: 23px;
+        margin-top: 11px;
       }
 
       .date-text {
@@ -998,7 +1033,10 @@
 
       .family-names {
         gap: 12px;
-        grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+        grid-template-columns:
+                    minmax(0, 1fr)
+                    1px
+                    minmax(0, 1fr);
         margin: 35px auto 30px;
       }
 
@@ -1014,11 +1052,76 @@
       .family-divider {
         min-height: 140px;
       }
+
+      @keyframes mobile-photo-entrance {
+        from {
+          opacity: 0;
+          transform: scale(1.03);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
     }
 
+    /* Short mobile screens */
+
+    @media (max-width: 600px) and (max-height: 740px) {
+      .opening-hero {
+        grid-template-rows:
+                    clamp(205px, 34svh, 255px)
+                    minmax(0, 1fr);
+        min-height: 570px;
+      }
+
+      .opening-content {
+        padding-bottom: 9px;
+        padding-top: 9px;
+      }
+
+      .opening-names {
+        font-size: clamp(37px, 10.8vw, 47px);
+        margin: 10px auto;
+      }
+
+      .opening-ampersand {
+        margin: 7px 0;
+      }
+
+      .opening-date {
+        font-size: 15px;
+      }
+
+      .opening-message {
+        font-size: 14px;
+        line-height: 1.25;
+        margin-top: 8px;
+      }
+
+      .opening-arrow {
+        margin-top: 7px;
+      }
+    }
+
+    /* Narrow mobile devices */
+
     @media (max-width: 350px) {
-      .person-name {
-        font-size: 39px;
+      .opening-eyebrow {
+        letter-spacing: 2px;
+      }
+
+      .opening-names {
+        font-size: 36px;
+      }
+
+      .opening-date {
+        font-size: 14px;
+      }
+
+      .opening-message {
+        font-size: 13px;
       }
 
       .countdown-circle {
@@ -1032,6 +1135,7 @@
     }
 
     /* Accessibility */
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -1046,11 +1150,11 @@
       }
 
       .reveal,
-      .hero .small-heading,
-      .couple-names,
-      .hero-date,
-      .hero-message,
-      .down-arrow {
+      .opening-eyebrow,
+      .opening-names,
+      .opening-date,
+      .opening-message,
+      .opening-arrow {
         opacity: 1;
         transform: none;
       }
@@ -1061,10 +1165,8 @@
 <body>
 
 <!--
-    The browser tries to play music automatically.
-
-    Most mobile browsers block autoplay with sound. If autoplay
-    is blocked, the first tap anywhere on the page starts it.
+    Mobile browsers usually block automatic audio with sound.
+    The script attempts autoplay and retries after the first tap.
 -->
 <audio
   id="backgroundMusic"
@@ -1081,54 +1183,50 @@
 </audio>
 
 <!-- =====================================================
-     HERO
+     OPENING
 ===================================================== -->
 
-<header class="hero">
+<header class="opening-hero">
+
+  <div class="opening-photo">
+    <img
+      src="./images/ajaz-nasma.jpeg"
+      alt="Nasma Nazrin and Ajaz Asharaf at the beach"
+    >
+  </div>
 
   <div
-    class="hero-photo"
+    class="opening-overlay"
     aria-hidden="true"
   ></div>
 
-  <div
-    class="hero-overlay"
-    aria-hidden="true"
-  ></div>
+  <div class="opening-content">
 
-  <div class="hero-content">
-
-    <p class="small-heading">
+    <p class="opening-eyebrow">
       Together with their families
     </p>
 
-    <h1 class="couple-names">
+    <h1 class="opening-names">
+      <span>Nasma Nazrin</span>
 
-            <span class="person-name">
-                Nasma Nazrin
-            </span>
-
-      <span class="and-symbol">
+      <span class="opening-ampersand">
                 &amp;
             </span>
 
-      <span class="person-name">
-                Ajaz Asharaf
-            </span>
-
+      <span>Ajaz Asharaf</span>
     </h1>
 
-    <p class="hero-date">
+    <p class="opening-date">
       Saturday, November 14, 2026 · Kerala
     </p>
 
-    <p class="hero-message">
+    <p class="opening-message">
       With joyful hearts, we invite you to share in the beginning
       of our forever and celebrate the day our two lives become one.
     </p>
 
     <a
-      class="down-arrow"
+      class="opening-arrow"
       href="#save-the-date"
       aria-label="Continue to the invitation"
     >
@@ -1141,7 +1239,9 @@
 
 <main>
 
-  <!-- SAVE THE DATE -->
+  <!-- =================================================
+       SAVE THE DATE
+  ================================================== -->
 
   <section
     class="section save-date"
@@ -1198,9 +1298,12 @@
     </div>
   </section>
 
-  <!-- COUNTDOWN -->
+  <!-- =================================================
+       COUNTDOWN
+  ================================================== -->
 
   <section class="section countdown-section">
+
     <div class="container">
 
       <p class="small-heading reveal">
@@ -1218,6 +1321,7 @@
       <div class="countdown-grid">
 
         <div class="countdown-column reveal zoom">
+
           <div class="countdown-circle">
                         <span
                           class="countdown-number"
@@ -1230,9 +1334,11 @@
           <span class="countdown-label">
                         Days
                     </span>
+
         </div>
 
         <div class="countdown-column reveal zoom delay-1">
+
           <div class="countdown-circle">
                         <span
                           class="countdown-number"
@@ -1245,9 +1351,11 @@
           <span class="countdown-label">
                         Hours
                     </span>
+
         </div>
 
         <div class="countdown-column reveal zoom delay-2">
+
           <div class="countdown-circle">
                         <span
                           class="countdown-number"
@@ -1260,9 +1368,11 @@
           <span class="countdown-label">
                         Minutes
                     </span>
+
         </div>
 
         <div class="countdown-column reveal zoom delay-3">
+
           <div class="countdown-circle">
                         <span
                           class="countdown-number"
@@ -1275,6 +1385,7 @@
           <span class="countdown-label">
                         Seconds
                     </span>
+
         </div>
 
       </div>
@@ -1289,9 +1400,12 @@
     </div>
   </section>
 
-  <!-- EVENTS -->
+  <!-- =================================================
+       CELEBRATIONS
+  ================================================== -->
 
   <section class="section events-section">
+
     <div class="container">
 
       <p class="small-heading reveal">
@@ -1311,6 +1425,8 @@
       </p>
 
       <div class="events-grid">
+
+        <!-- Wedding -->
 
         <article class="event-card reveal from-left">
 
@@ -1347,6 +1463,8 @@
 
         </article>
 
+        <!-- Reception -->
+
         <article class="event-card reveal from-right delay-1">
 
           <p class="event-time">
@@ -1382,12 +1500,16 @@
         </article>
 
       </div>
+
     </div>
   </section>
 
-  <!-- VENUES -->
+  <!-- =================================================
+       VENUES
+  ================================================== -->
 
   <section class="section venues-section">
+
     <div class="container">
 
       <p class="small-heading reveal">
@@ -1403,6 +1525,8 @@
       </div>
 
       <div class="venue-list">
+
+        <!-- Wedding venue -->
 
         <article class="venue-card reveal">
 
@@ -1435,7 +1559,7 @@
 
           <iframe
             class="map"
-            title="Map of St. John The Baptist Church Hall"
+            title="Map of St. John The Baptist Church"
             src="https://www.google.com/maps?q=St%20John%20The%20Baptist%20Church%20Moonnumuri%20Mattathur%20Kerala%20680684&output=embed"
             loading="lazy"
             allowfullscreen
@@ -1443,6 +1567,8 @@
           ></iframe>
 
         </article>
+
+        <!-- Reception venue -->
 
         <article class="venue-card reveal">
 
@@ -1484,12 +1610,15 @@
         </article>
 
       </div>
+
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
@@ -1533,13 +1662,13 @@
   "use strict";
 
   /* =====================================================
-     BACKGROUND MUSIC
+     MUSIC
   ===================================================== */
 
   const backgroundMusic =
     document.getElementById("backgroundMusic");
 
-  backgroundMusic.volume = 0.7;
+  backgroundMusic.volume = 0.35;
 
   let musicStarted = false;
 
@@ -1554,8 +1683,8 @@
       removeMusicListeners();
     } catch (error) {
       /*
-       * Autoplay was blocked by the browser.
-       * The first tap or click will try again.
+       * Automatic audio was blocked by the browser.
+       * The first user tap will try again.
        */
     }
   }
@@ -1597,7 +1726,8 @@
     document.getElementById("countdownMessage");
 
   function updateCountdown() {
-    const remainingTime = weddingTime - Date.now();
+    const remainingTime =
+      weddingTime - Date.now();
 
     if (remainingTime <= 0) {
       daysElement.textContent = "0";
@@ -1615,21 +1745,23 @@
     const oneHour = 1000 * 60 * 60;
     const oneMinute = 1000 * 60;
 
-    const days = Math.floor(
-      remainingTime / oneDay
-    );
+    const days =
+      Math.floor(remainingTime / oneDay);
 
-    const hours = Math.floor(
-      (remainingTime % oneDay) / oneHour
-    );
+    const hours =
+      Math.floor(
+        (remainingTime % oneDay) / oneHour
+      );
 
-    const minutes = Math.floor(
-      (remainingTime % oneHour) / oneMinute
-    );
+    const minutes =
+      Math.floor(
+        (remainingTime % oneHour) / oneMinute
+      );
 
-    const seconds = Math.floor(
-      (remainingTime % oneMinute) / 1000
-    );
+    const seconds =
+      Math.floor(
+        (remainingTime % oneMinute) / 1000
+      );
 
     daysElement.textContent = String(days);
 
@@ -1647,27 +1779,28 @@
   setInterval(updateCountdown, 1000);
 
   /* =====================================================
-     SCROLL REVEAL
+     SCROLL ANIMATIONS
   ===================================================== */
 
   const revealElements =
     document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -25px 0px"
-      }
-    );
+    const revealObserver =
+      new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -25px 0px"
+        }
+      );
 
     revealElements.forEach(function (element) {
       revealObserver.observe(element);
@@ -1700,7 +1833,7 @@
       "DTEND:20261114T083000Z",
       "SUMMARY:Wedding of Nasma Nazrin and Ajaz Asharaf",
       "DESCRIPTION:Wedding ceremony of Nasma Nazrin and Ajaz Asharaf",
-      "LOCATION:St. John The Baptist Church Hall, Moonnumuri, Mattathur, Kerala 680684",
+      "LOCATION:St. John The Baptist Church, Moonnumuri, Mattathur, Kerala 680684",
       "END:VEVENT",
 
       "BEGIN:VEVENT",
@@ -1716,12 +1849,13 @@
       "END:VCALENDAR"
     ].join("\r\n");
 
-    const calendarFile = new Blob(
-      [calendarData],
-      {
-        type: "text/calendar;charset=utf-8"
-      }
-    );
+    const calendarFile =
+      new Blob(
+        [calendarData],
+        {
+          type: "text/calendar;charset=utf-8"
+        }
+      );
 
     const fileUrl =
       URL.createObjectURL(calendarFile);
@@ -1735,6 +1869,7 @@
       "Nasma-Nazrin-Ajaz-Asharaf-Wedding.ics";
 
     document.body.appendChild(downloadLink);
+
     downloadLink.click();
     downloadLink.remove();
 
